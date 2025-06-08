@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -103,6 +104,8 @@
     "@storybook/react-vite": "^8.6.2",
     "@storybook/test": "^8.6.2",
     "axios": "^1.8.3",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.1",
@@ -111,6 +114,7 @@
     "express": "^4.18.2",
     "globals": "^16.2.0",
     "husky": "^9.1.7",
+    "lint-staged": "^16.1.0",
     "lodash-es": "^4.17.21",
     "prettier": "^3.5.3",
     "storybook": "^8.6.2",
@@ -171,5 +175,15 @@
     "presets": [
       "react-app"
     ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
