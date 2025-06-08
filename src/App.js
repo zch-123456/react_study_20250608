@@ -23,18 +23,18 @@
 
 // export default App;
 
-import { useState } from "react"
-import _axios from "./utils/axios"
+import { useState } from "react";
+import _axios from "./utils/axios";
 import {
   styled,
   css,
   createGlobalStyle,
   keyframes,
   ThemeProvider
-} from "styled-components"
-import Test1 from "./Test/a1"
-import Test2 from "./Test/a2"
-import { color } from "storybook/internal/theming"
+} from "styled-components";
+import Test1 from "./Test/a1";
+import Test2 from "./Test/a2";
+import { color } from "storybook/internal/theming";
 
 const f1 = keyframes`
   from {
@@ -43,22 +43,22 @@ const f1 = keyframes`
   to {
     transform: rotate(90deg);
   }
-`
+`;
 
 const _css = css`
   color: ${(p) => p._color};
   background-color: ${(p) => p._bgColor} !important;
   font-size: 30px;
-`
+`;
 
 const StyledDiv1 = styled.div`
   background-color: blue;
-`
+`;
 
 const StyledDiv = styled.div.attrs((p) => {
-  p._color = "#ff9008"
-  console.log("ttttttt", p)
-  return p
+  p._color = "#ff9008";
+  console.log("ttttttt", p);
+  return p;
 })`
   background-color: red;
 
@@ -78,18 +78,22 @@ const StyledDiv = styled.div.attrs((p) => {
   ${_css}
   ${(p) => p.otherstyle}
   color: ${(p) => p.theme.color};
-`
+`;
 
 function App() {
-  const [content, setContent] = useState("")
-  const [content1, setContent1] = useState("")
-  const [content2, setContent2] = useState("")
+  const [content, setContent] = useState("");
+  const [content1, setContent1] = useState("");
+  const [content2, setContent2] = useState("");
 
   const updateCount = () => {
-    _axios.post("/cm/a").then((res1) => setContent(res1))
-    _axios.post("/sku/a").then((res1) => setContent1(res1))
-    _axios.post("/stock/aab").then((res1) => setContent2(res1))
-  }
+    _axios.post("/cm/a").then((res1) => setContent(res1));
+    _axios.post("/sku/a").then((res1) => setContent1(res1));
+    _axios.post("/stock/aab").then((res1) => setContent2(res1));
+  };
+
+  let b = "11122";
+
+  console.log("test看一下1111");
 
   return (
     <>
@@ -103,7 +107,7 @@ function App() {
       </StyledDiv>
       <StyledDiv>779333999999977</StyledDiv>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
