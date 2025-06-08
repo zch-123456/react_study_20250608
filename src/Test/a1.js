@@ -23,16 +23,17 @@
 
 // export default App;
 
-import { useState } from "react"
-import { styled, css, createGlobalStyle } from "styled-components"
+import { useState } from "react";
+import { styled, css, createGlobalStyle } from "styled-components";
 
 function App(props) {
-  console.log("====", props)
+  console.log("====", props);
+  console.log("-=--dwd-wd");
   return (
     <>
       <div>a1a1a1a1</div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
